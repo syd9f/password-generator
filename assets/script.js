@@ -1,61 +1,48 @@
 // Assignment code here
 
-// // Prompt for Password Length (between 8 and 128 characters)
-// var passwordLength = prompt("Select an amount of characters between 8 and 128");
-// if (passwordLength > 128 || passwordLength < 8 || passwordLength == null){
-//   alert("Must include number between 8 and 128");
-// } else {
-//   // add code to include in password;
-//   var num = [0,1,2,3,4,5,6,7,8,9]
-// }
-
-// // Prompt for including UPPERCASE characters
-// var passwordUppercase = confirm("Would you like to include Uppercase characters?")
-// if (passwordUppercase == null) {
-  
-// } else {
-//   // add code to include in password;
-//   var uppercase = [A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z] 
-// }
-
-// // Prompt for including lowercase characters
-// var passwordLowercase = confirm("Would you like to include lowercase characters?")
-// if (passwordLowercase == null) {
-//   // add code to not include in password;
-// } else {
-//   // add code to include in password;
-//   var lowercase = ["a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z"]
-// }
-
-// // Prompt for including numbers
-// var passwordNumeric = confirm("Would you like to include numeric characters?")
-// if (passwordUppercase == null) {
-//   // add code to not include in password;
-// } else {
-//   // add code to include in password;
-// }
-
-// // Prompt for including special characters
-// var passwordSpecial = confirm("Would you like to include special characters?")
-// if (passwordUppercase == null) {
-//   // add code to not include in password;
-// } else {
-//   // add code to include in password;
-// }
-
+var num = [0,1,2,3,4,5,6,7,8,9]
 // Declare Prompts in a function
 function generatePrompts() {
   var passwordLength = prompt("Select an amount of characters between 8 and 128");
-  if (passwordLength > 128 || passwordLength < 8 || passwordLength == null){
+  if (passwordLength > 128 || passwordLength < 8 || passwordLength == null || passwordLength != num){
     alert("Must include number between 8 and 128");
+  // ADD CODE TO DISPLAY PASSWORD LENGTH PROMPT AGAIN UNTIL IT MATCHES THE REQUIREMENTS:
   } else {
-    // add code to include in password;
-    var num = [0,1,2,3,4,5,6,7,8,9]
+    // ADD CODE THAT WILL PUT CHOSEN VALUE INTO X:
+    alert("Password will be x characters long");
+    // ADD CODE THAT WILL SET PASSWORD TO X AMOUNT OF CHARACTERS:
   }
   var passwordUppercase = confirm("Would you like to include Uppercase characters?");
+  if (passwordUppercase == null) {
+    alert("Password will not contain Uppercase characters.");
+    // ADD CODE TO EXCLUDE UPPERCASE CHARACTERS FROM PASSWORD:
+  } else {
+    alert("Password will contain Uppercase characters.");
+  }
   var passwordLowercase = confirm("Would you like to include lowercase characters?");
+  if (passwordLowercase == null) {
+    alert("Password will not contain lowercase characters.");
+    // ADD CODE TO EXCLUDE LOWERCASE CHARACTERS FROM PASSWORD:
+  } else {
+    alert("Password will contain lowercase characters.");
+    // ADD CODE TO INCLUDE LOWERCASE CHARACTERS IN PASSWORD:
+  }
   var passwordNumeric = confirm("Would you like to include numeric characters?");
-  var passwordSpecial = confirm("Would you like to include special characters?")
+  if (passwordNumeric == null) {
+    alert("Password will contain numbers.");
+    // ADD CODE TO EXCLUDE NUMBERS FROM PASSWORD:
+  } else {
+    alert("Password will not contain numbers.");
+    // ADD CODE TO INCLUDE NUMBERS IN PASSWORD
+  }
+  var passwordSpecial = confirm("Would you like to include special characters?");
+  if (passwordSpecial == null) {
+    alert("Password will not contain special characters.");
+    // ADD CODE TO EXCLUDE SPECIAL CHARACTERS FROM PASSWORD:
+  } else {
+    alert("Password will contain special characters.");
+    // ADD CODE TO INCLUDE SPECIAL CHARACTERS IN PASSWORD:
+  }
 }
 
 // Call the prompt function
