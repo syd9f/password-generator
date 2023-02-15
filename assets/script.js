@@ -43,6 +43,23 @@
 //   // add code to include in password;
 // }
 
+// Declare Prompts in a function
+function generatePrompts() {
+  var passwordLength = prompt("Select an amount of characters between 8 and 128");
+  if (passwordLength > 128 || passwordLength < 8 || passwordLength == null){
+    alert("Must include number between 8 and 128");
+  } else {
+    // add code to include in password;
+    var num = [0,1,2,3,4,5,6,7,8,9]
+  }
+  var passwordUppercase = confirm("Would you like to include Uppercase characters?");
+  var passwordLowercase = confirm("Would you like to include lowercase characters?");
+  var passwordNumeric = confirm("Would you like to include numeric characters?");
+  var passwordSpecial = confirm("Would you like to include special characters?")
+}
+
+// Call the prompt function
+generatePrompts();
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate").click();
