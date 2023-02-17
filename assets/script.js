@@ -7,9 +7,7 @@ function generatePrompts() {
     alert("Must include number between 8 and 128");
   // ADD CODE TO DISPLAY PASSWORD LENGTH PROMPT AGAIN UNTIL IT MATCHES THE REQUIREMENTS:
   } else {
-    // ADD CODE THAT WILL PUT CHOSEN VALUE INTO X:
-    alert("Password will be x characters long");
-    // ADD CODE THAT WILL SET PASSWORD TO X AMOUNT OF CHARACTERS:
+    alert("Password will be " + passwordLength + " characters long");
   }
   var passwordUppercase = confirm("Would you like to include Uppercase characters?");
   if (passwordUppercase == null) {
@@ -44,9 +42,6 @@ function generatePrompts() {
     // ADD CODE TO INCLUDE SPECIAL CHARACTERS IN PASSWORD:
   }
 }
-
-// Call the prompt function
-// generatePrompts();
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
