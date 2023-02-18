@@ -1,19 +1,15 @@
 // Assignment code here
-var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-var lowercase = "abcdefghijklmnopqrstuvwxyz"
-var numbers = "0123456789"
-var special = "~@#$%^&*()-+?><,."
 
 // Declare Prompts in a function
 function generatePrompts() {
-  var passwordLength = prompt("Select an amount of characters between 8 and 128");
-
-  if (passwordLength > 128 || passwordLength < 8 || passwordLength == null){
+  var passwordLength = '';
+  prompt("Select an amount of characters between 8 and 128");
+  while (passwordLength > 128 || passwordLength < 8 || passwordLength == null){
     alert("Must include number between 8 and 128");
     var passwordLength = prompt("Select an amount of characters between 8 and 128");
-  } else {
-    alert("Password will be " + passwordLength + " characters long");
   }
+  alert("Password will be " + passwordLength + " characters long");
+
   
   var passwordUppercase = confirm("Would you like to include Uppercase characters?");
 
@@ -48,7 +44,17 @@ function generatePrompts() {
 // Generate Password
 
 function generatePassword() {
+  var charset = '';
+  var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var lowercase = "abcdefghijklmnopqrstuvwxyz";
+  var numbers = "0123456789";
+  var special = "~@#$%^&*()-+?><,.";
 
+  if (passwordUppercase === "null") {
+    charset = !uppercase;
+  } else if (passwordUppercase === true){
+    charset = uppercase;
+  }
 }
 
 // Get references to the #generate element
