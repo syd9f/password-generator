@@ -36,6 +36,15 @@ function generatePrompts() {
   } else {
     alert("Password will contain special characters.");
   }
+
+  while (passwordUppercase == false && passwordLowercase == false && passwordNumeric == false && passwordSpecial == false) {
+    alert("You must include at least one option to generate password")
+    var passwordUppercase = confirm("Would you like to include Uppercase characters?");
+    var passwordLowercase = confirm("Would you like to include lowercase characters?");
+    var passwordNumeric = confirm("Would you like to include numeric characters?");
+    var passwordSpecial = confirm("Would you like to include special characters?");
+  }
+
 }
 
 // Generate Password
@@ -44,14 +53,10 @@ function generatePassword() {
   var charset = '';
   var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var lowercase = "abcdefghijklmnopqrstuvwxyz";
-  var numbers = "0123456789";
+  var numeric = "0123456789";
   var special = "~@#$%^&*()-+?><,.";
 
-  if (passwordUppercase === "null") {
-    charset = !uppercase;
-  } else if (passwordUppercase === true){
-    charset = uppercase;
-  }
+  console.log(charset)
 }
 
 // Get references to the #generate element
