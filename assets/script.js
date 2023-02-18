@@ -4,7 +4,7 @@
 function generatePrompts() {
   var passwordLength = '';
   prompt("Select an amount of characters between 8 and 128");
-  while (passwordLength > 128 || passwordLength < 8 || passwordLength == null){
+  while (passwordLength > 128 || passwordLength < 8 || passwordLength == null || isNaN(passwordLength)) {
     alert("Must include number between 8 and 128");
     var passwordLength = prompt("Select an amount of characters between 8 and 128");
   }
