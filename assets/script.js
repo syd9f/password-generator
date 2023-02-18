@@ -2,17 +2,14 @@
 
 // Declare Prompts in a function
 function generatePrompts() {
-  var passwordLength = '';
-  prompt("Select an amount of characters between 8 and 128");
+  var passwordLength = prompt("Select an amount of characters between 8 and 128");
   while (passwordLength > 128 || passwordLength < 8 || passwordLength == null || isNaN(passwordLength)) {
     alert("Must include number between 8 and 128");
     var passwordLength = prompt("Select an amount of characters between 8 and 128");
   }
   alert("Password will be " + passwordLength + " characters long");
 
-  
   var passwordUppercase = confirm("Would you like to include Uppercase characters?");
-
   if (passwordUppercase == false) {
     alert("Password will not contain Uppercase characters.");
   } else {
