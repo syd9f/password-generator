@@ -13,28 +13,28 @@ function generatePrompts() {
   
   var passwordUppercase = confirm("Would you like to include Uppercase characters?");
 
-  if (passwordUppercase == null) {
+  if (passwordUppercase == false) {
     alert("Password will not contain Uppercase characters.");
   } else {
     alert("Password will contain Uppercase characters.");
   }
 
   var passwordLowercase = confirm("Would you like to include lowercase characters?");
-  if (passwordLowercase == null) {
+  if (passwordLowercase == false) {
     alert("Password will not contain lowercase characters.");
   } else {
     alert("Password will contain lowercase characters.");
   }
 
   var passwordNumeric = confirm("Would you like to include numeric characters?");
-  if (passwordNumeric == null) {
+  if (passwordNumeric == false) {
     alert("Password will not contain numbers.");
   } else {
     alert("Password will contain numbers.");
   }
 
   var passwordSpecial = confirm("Would you like to include special characters?");
-  if (passwordSpecial == null) {
+  if (passwordSpecial == false) {
     alert("Password will not contain special characters.");
   } else {
     alert("Password will contain special characters.");
