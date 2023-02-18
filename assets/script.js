@@ -1,7 +1,7 @@
 // Assignment code here
 
 // Declare Prompts in a function
-function generatePrompts() {
+function generatePassword() {
   var passwordLength = prompt("Select an amount of characters between 8 and 128");
   while (passwordLength > 128 || passwordLength < 8 || passwordLength == null || isNaN(passwordLength)) {
     alert("Must include number between 8 and 128");
@@ -45,18 +45,17 @@ function generatePrompts() {
     var passwordSpecial = confirm("Would you like to include special characters?");
   }
 
-}
-
-// Generate Password
-
-function generatePassword() {
   var charset = '';
   var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var lowercase = "abcdefghijklmnopqrstuvwxyz";
   var numeric = "0123456789";
   var special = "~@#$%^&*()-+?><,.";
 
-  console.log(charset)
+  console.log(charset);
+
+//   for (var i = 0, i < passwordLength; i++) {
+//     randomString 
+//   }
 }
 
 // Get references to the #generate element
@@ -72,4 +71,4 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", generatePrompts);
+generateBtn.addEventListener("click", generatePassword);
