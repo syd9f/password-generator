@@ -71,8 +71,32 @@ function generatePassword() {
   var numeric = "0123456789";
   var special = "~@#$%^&*()-+?><,.";
 
-  console.log(charset);
+// Take user input to generate charset for password
+  if (passwordUppercase == true){
+    charset = charset + uppercase;
+  } else {
+    charset = '';
+  }
 
+  if (passwordLowercase == true){
+    charset = charset + lowercase;
+  } else {
+    charset = charset;
+  }
+
+  if (passwordNumeric == true){
+    charset = charset + numeric;
+  } else {
+    charset = charset;
+  }
+
+  if (passwordSpecial == true){
+    charset = charset + special;
+  } else {
+    charset = charset;
+  }
+
+  console.log(charset);
 //   for (var i = 0, i < passwordLength; i++) {
 //     randomString 
 //   }
