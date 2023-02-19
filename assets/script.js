@@ -65,6 +65,7 @@ function generatePassword() {
     }
   }
 
+  // Declare character types
   var charset = '';
   var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var lowercase = "abcdefghijklmnopqrstuvwxyz";
@@ -96,10 +97,8 @@ function generatePassword() {
     charset = charset;
   }
 
-  console.log(charset);
-  var randomPassword = '';
-
   // Generate random password from charset string
+  var randomPassword = '';
   for (var i = 0; i < passwordLength; i++) {
     randomPassword += charset.charAt(Math.floor(Math.random() * charset.length));
   }
