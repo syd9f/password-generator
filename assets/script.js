@@ -36,7 +36,7 @@ function generatePassword() {
   } else {
     alert("Password will contain special characters.");
   }
-
+// Loops until at least one condition is selected
   while (passwordUppercase == false && passwordLowercase == false && passwordNumeric == false && passwordSpecial == false) {
     alert("You must include at least one option to generate password")
     var passwordUppercase = confirm("Would you like to include Uppercase characters?");
@@ -97,9 +97,14 @@ function generatePassword() {
   }
 
   console.log(charset);
-//   for (var i = 0, i < passwordLength; i++) {
-//     randomString 
-//   }
+  var randomPassword = '';
+
+  // Generate random password from charset string
+  for (var i = 0; i < passwordLength; i++) {
+    randomPassword += charset.charAt(Math.floor(Math.random() * charset.length));
+  }
+
+  console.log(randomPassword);
 }
 
 // Get references to the #generate element
